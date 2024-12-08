@@ -31,7 +31,7 @@ void append(Element **tete, int valeur){
 Element* triParInsertion(Element *tete){
     if(tete == NULL || tete->suivant == NULL) return tete; //Si la liste est vide ou a un seul element
 
-    Element *trie = NULL ;//Liste triée
+    Element *trie = NULL ;//Liste triÃ©e
     Element *courante = tete ;// liste courante
 
     while(courante != NULL){
@@ -61,23 +61,23 @@ Element *triParInsertion2(Element *tete) {
         return NULL; // Si la liste est vide, retourner NULL.
     }
 
-    Element *listeTrie = NULL; // Pointeur vers la nouvelle liste triée.
+    Element *listeTrie = NULL; // Pointeur vers la nouvelle liste triÃ©e.
 
     Element *tmp = tete;
     while (tmp != NULL) {
-        // Créer un nouveau noeud pour la valeur actuelle.
+        // CrÃ©er un nouveau noeud pour la valeur actuelle.
         Element *nv = malloc(sizeof(Element));
         if (nv == NULL) {
-            // Gérer une éventuelle erreur d'allocation mémoire.
-            perror("Erreur d'allocation mémoire");
+            // GÃ©rer une Ã©ventuelle erreur d'allocation mÃ©moire.
+            perror("Erreur d'allocation mÃ©moire");
             exit(EXIT_FAILURE);
         }
         nv->valeur = tmp->valeur;
         nv->suivant = NULL;
 
-        // Insérer le nouveau noeud dans la liste triée.
+        // InsÃ©rer le nouveau noeud dans la liste triÃ©e.
         if (listeTrie == NULL || listeTrie->valeur > nv->valeur) {
-            // Insertion en tête de la liste triée.
+            // Insertion en tÃªte de la liste triÃ©e.
             nv->suivant = listeTrie;
             listeTrie = nv;
         } else {
@@ -86,7 +86,7 @@ Element *triParInsertion2(Element *tete) {
             while (courant->suivant != NULL && courant->suivant->valeur <= nv->valeur) {
                 courant = courant->suivant;
             }
-            // Insérer le nouveau noeud après le courant.
+            // InsÃ©rer le nouveau noeud aprÃ¨s le courant.
             nv->suivant = courant->suivant;
             courant->suivant = nv;
         }
