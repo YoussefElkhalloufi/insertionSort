@@ -3,14 +3,14 @@
 
 
 void triParInsertion(int arr[], int taille){
-    for (int i = 1; i < taille; i++) { // On commence avec le deuxième element
+    for (int i = 1; i < taille; i++) { // On commence avec le deuxiÃ¨me element
 
         int cle = arr[i]; // Initialiser lelement courant dans la variable cle
 
-        int j = i - 1; // Initialiser j à l'indice précédent (i - 1)
+        int j = i - 1; // Initialiser j Ã  l'indice prÃ©cÃ©dent (i - 1)
 
 
-        // Cette boucle déplace les éléments plus grands que la clé d'une position vers la droite
+        // Cette boucle dÃ©place les Ã©lÃ©ments plus grands que la clÃ© d'une position vers la droite
 
         while (j >= 0 && arr[j] > cle) { // Tant que j >= 0 et que lelement arr[j] est superieur a la cle
             arr[j + 1] = arr[j]; // Decale l'element arr[j] d'une position vers la droite
